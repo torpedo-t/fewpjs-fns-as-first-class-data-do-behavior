@@ -5,7 +5,7 @@ document.querySelector("button").addEventListener("click", handleClick);
 function handleClick(e) {
   const timeString = document.getElementById('time').value
 
-  // console.log(timeString)
+  console.log(`${timeString}`);
 
   displayMessage(greet(timeString))
 }
@@ -22,6 +22,7 @@ function handleClick(e) {
 function greet(time) {
   let splitTime = time.split(":")
   let parsedTime = parseInt(splitTime[0])
+  console.log(`${parsedTime}`);
   if (parsedTime < 12) {
     return "Good Morning"
   }
